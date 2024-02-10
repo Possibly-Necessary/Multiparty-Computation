@@ -293,7 +293,7 @@ func wireValues(prefix string, X *big.Int, bits int) map[string]*big.Int {
 	return values
 }
 
-// MerlinSetupGarbledCircuit setups the garbled circuit for Merlin's input wires and performs oblivious transfers for Arthur's inputs.
+// MerlinSetupGarbledCircuit sets up the garbled circuit for Merlin's input wires and performs oblivious transfers for Arthur's inputs.
 func MerlinGarbledCircuit(circuit map[string][]string, inputWires, outputWires []string, X *big.Int, xBits, yBits, n, k int, ArthurChann, MerlinChann chan *big.Int, wg *sync.WaitGroup) {
 	garbledTables, labels, wireIndex := garbleCircuit(circuit, inputWires, outputWires, k)
 
