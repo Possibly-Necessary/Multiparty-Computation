@@ -53,10 +53,10 @@ func parseVerilog(filename string) (map[string]interface{}, []string, []string, 
 			if strings.Contains(lhs, "[") || strings.Contains(lhs, ":") {
 				return nil, nil, nil, fmt.Errorf("unsupported statement: %s", l)
 			}
-			// This is a simplified version; you should expand it based on the operations you need to support
+			// **must recheck this later...
 			rhs := strings.Join(tokens[3:], "")
 			// Further processing of rhs to handle operations...
-			circuit[lhs] = rhs // Placeholder for actual operation parsing
+			circuit[lhs] = rhs // **check later...
 		} else {
 			return nil, nil, nil, fmt.Errorf("unsupported statement: %s", l)
 		}
