@@ -190,7 +190,7 @@ func garbleCircuit(circuit map[string][]string, inputs, outputs []string, k int)
 	for _, wireName := range wires {
 		if _, found := find(inputs, wireName); found {
 			fmt.Println("input wire:", wireName)
-			garbledTables = append(garbledTables, []interface{}{nil, nil}) // Input wire, add placeholder value
+			garbledTables = append(garbledTables, []interface{}{nil, nil}) // Input wire
 			continue
 		}
 
