@@ -31,21 +31,21 @@ func labelTruthTable(outputName string, gate string, inputNames []string, labels
 	var logicTable [][]int
 	switch gate {
 	case "and":
-		logicTable = [][]int{{0, 0}, {0, 1}, {1, 0}, {1, 1}}
+		logicTable = [][]int{{0, 0}, {0, 1}}
 	case "or":
-		logicTable = [][]int{{0, 0}, {0, 1}, {1, 0}, {1, 1}}
+		logicTable = [][]int{{0,1}, {1,1}}
 	case "nand":
-		logicTable = [][]int{{1, 1}, {1, 1}, {1, 0}, {0, 1}}
+		logicTable = [][]int{{1, 1}, {1, 0}}
 	case "xnor":
-		logicTable = [][]int{{1, 1}, {0, 1}, {1, 0}, {0, 0}}
+		logicTable = [][]int{{1, 0}, {0, 1}}
 	case "xor":
-		logicTable = [][]int{{0, 0}, {1, 1}, {1, 0}, {0, 1}}
+		logicTable = [][]int{{0, 1}, {1,0}}
 	case "ornot":
-		logicTable = [][]int{{1, 0}, {1, 1}, {0, 0}, {1, 1}}
+		logicTable = [][]int{{1, 0}, {1, 1}}
 	case "nor":
-		logicTable = [][]int{{1, 0}, {0, 0}, {0, 0}, {0, 1}}
+		logicTable = [][]int{{1, 0}, {0, 0}}
 	case "andnot":
-		logicTable = [][]int{{0, 0}, {1, 0}, {1, 0}, {1, 1}}
+		logicTable = [][]int{{0, 0}, {1, 0}}
 	case "not":
 		logicTable = [][]int{{1}, {0}}
 	case "const_0":
