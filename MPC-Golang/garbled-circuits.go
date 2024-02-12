@@ -76,7 +76,7 @@ func labelTruthTable(outputName string, gate string, inputNames []string, labels
 		} else if gate == "const_0" || gate == "const_1" { // Special case for constant gates
 			outputValue = logicTable[0][0]
 		} else {
-			outputValue = logicTable[inpValues[0]*2+inpValues[1]][0] // Adjust according to the logic table structure
+			outputValue = logicTable[inpValues[0]*2+inpValues[1]][0] 
 		}
 		outputLabel := labels[outputName][outputValue]
 		inputLabels := make([]*big.Int, len(inputNames))
