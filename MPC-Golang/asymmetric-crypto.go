@@ -36,7 +36,7 @@ func Encrypt(message []byte, e, N *big.Int) *big.Int {
 	return c
 }
 
-// Function that decryptes messages using the private key (d, N)
+// Function that decryptes the messages 
 func Decrypt(c, d, N *big.Int) string {
 	m := new(big.Int).Exp(c, d, N) // m = c^d mod N
 
