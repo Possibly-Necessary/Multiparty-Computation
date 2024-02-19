@@ -31,7 +31,7 @@ func ObliviousTransferMerlin(m0, m1, e, d, N *big.Int, ArthurChann, MerlinChann 
 	ArthurChann <- x0 // (2)
 	ArthurChann <- x1
 
-	// Recieve reply
+	// Receive reply
 	v := <-MerlinChann
 
 	// Compute k0, k1 and encrypted messages
@@ -57,7 +57,7 @@ func ObliviousTransferArthur(b, n int, MerlinChann, ArthurChann chan *big.Int, w
 		panic("b must be 0 or 1")
 	}
 
-	// Receive (text book) RSA parameters from Merlin (1)
+	// Receive (textbook) RSA parameters from Merlin (1)
 	e := <-ArthurChann
 	N := <-ArthurChann
 
