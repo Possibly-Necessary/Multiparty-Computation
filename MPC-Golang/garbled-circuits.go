@@ -163,7 +163,7 @@ func topoOrder(circuit map[string][]string, inputs []string, outputs []string) [
 	return postOrder
 }
 
-// Helper function to check if an item is in a slice.
+// Function to check if an item is in a slice.
 func find(slice []string, val string) (int, bool) {
 	for i, item := range slice {
 		if item == val {
